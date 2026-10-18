@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>calculater</title>
+</head>
+<body>
+    <form action="/add" method="POST">
+        <label>Name:</label>
+        <input type="number_1" name="number_1" required>
+        <label>Category:</label>
+        <select name="category">
+            <option value="1">(+)</option>
+            <option value="2">(-)</option>
+            <option value="3">(x)</option>
+            <option value="4">(%)</option>
+        </select><br><br>
+        <label>number2</label>
+        <input type="number_2" name="number_2" required>
+        <button type="submit">Calculate</button>
+    </form>
+        <h3>Result: {{ result }}</h3>
+</body>
+</html>
