@@ -24,6 +24,8 @@ def home():
                 result = "Error: Cannot divide by zero"
 
     return render_template("web body.html", result=result)
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    
+    port = int(os.environ.get("PORT", 5000))\
+    app.run(host="0.0.0.0", port=port)
