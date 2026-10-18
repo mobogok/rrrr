@@ -1,23 +1,30 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>calculater</title>
+    <title>Simple Calculator</title>
 </head>
 <body>
-    <form action="/add" method="POST">
-        <label>Name:</label>
-        <input type="number_1" name="number_1" required>
-        <label>Category:</label>
+    <h2>Simple Calculator</h2>
+    
+    <form action="/" method="POST">
+        <input type="number" name="number_1" step="any" required>
+        
         <select name="category">
-            <option value="1">(+)</option>
-            <option value="2">(-)</option>
-            <option value="3">(x)</option>
-            <option value="4">(%)</option>
-        </select><br><br>
-        <label>number2</label>
-        <input type="number_2" name="number_2" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        
+        <input type="number" name="number_2" step="any" required>
+        
         <button type="submit">Calculate</button>
     </form>
+
+    <!-- ถ้ามีผลลัพธ์ ให้แสดงตรงนี้ -->
+    {% if result is not none %}
         <h3>Result: {{ result }}</h3>
+    {% endif %}
 </body>
 </html>
